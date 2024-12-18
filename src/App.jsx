@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   console.log('API URL:', import.meta.env.VITE_APP_API_URL);
-  const URL = import.meta.env.VITE_APP_API_URL;
+  const URL = `https://${import.meta.env.VITE_APP_API_URL}`;
 
   return (
     <div>
