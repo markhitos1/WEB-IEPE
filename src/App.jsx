@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     // Redireccionar después de 5 segundos
     const timer = setTimeout(() => {
-      window.location.href = `https://${import.meta.env.VITE_APP_URL}`;
+      window.location.href = `https://${import.meta.env.VITE_VERCEL_URL}`;
     },3000);
 
     return () => clearTimeout(timer);
