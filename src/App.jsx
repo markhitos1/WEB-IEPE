@@ -1,19 +1,28 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 
 function App() {
-  console.log('API URL:', import.meta.env.VITE_APP_URL);
-  const URL = `https://${import.meta.env.VITE_APP_URLL}`;
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    // Redireccionar después de 5 segundos
+    const timer = setTimeout(() => {
+      window.location.href = `https://${import.meta.env.VITE_APP_URL}`;
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div>
-      <h1>Variable de Entorno en React</h1>
-      <p>API URL: {import.meta.env.VITE_APP_URL}</p>
-      <a href={URL}>Ir a la URL</a>
-
+    <div className="loader">
+      <div className="ring"></div>
+      <div className="ring"></div>
+      <img
+        src="https://iepe-portal.vercel.app/assets/LOGO/logo-rojo.svg"
+        alt="Logo"
+      />
     </div>
   );
 }
 
-
-export default App
+export default App;
