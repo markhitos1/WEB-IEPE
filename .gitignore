@@ -1,0 +1,16 @@
+# Ignorar archivos de entorno
+.env
+.env.* # Ignora todos los archivos como .env.development o .env.production
+
+# Archivos de configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Node modules (dependencias)
+node_modules/
+
+# Archivos de construcción
+dist/
+
+# Cachés de Vite y herramientas
+.vite/

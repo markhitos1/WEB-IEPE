@@ -2,13 +2,13 @@ import { useEffect } from 'react';
 import './App.css'
 
 function App() {
-  console.log(import.meta.env.VITE_VERCEL_URL);
+  console.log(import.meta.env.VITE_APP_URL);
   
   useEffect(() => {
     // Redireccionar después de 5 segundos
     const timer = setTimeout(() => {
-      window.location.href = `${import.meta.env.REACT_APP_VERCEL_URL}`;
-    },30000);
+      window.location.href =`https://${import.meta.env.VITE_APP_URL}` ;
+    },3000);
 
     return () => clearTimeout(timer);
   }, []);
