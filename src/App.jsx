@@ -1,17 +1,16 @@
-import { useEffect } from 'react';
 import './App.css'
 
 function App() {
-  console.log(import.meta.env.VITE_APP_URL);
-  
-  useEffect(() => {
+/*   console.log(import.meta.env.VITE_APP_URL);
+ */  
+/*   useEffect(() => {
     // Redireccionar después de 5 segundos
     const timer = setTimeout(() => {
       window.location.href =`https://${import.meta.env.VITE_APP_URL}` ;
     },3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, []); */
 
   return (
     <div className="loader">
