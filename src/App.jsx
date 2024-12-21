@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     // Redireccionar después de 5 segundos
     const timer = setTimeout(() => {
-      window.location.href = `${import.meta.env.VITE_VERCEL_URL}`;
+      window.location.href = `${import.meta.env.REACT_APP_VERCEL_URL}`;
     },30000);
 
     return () => clearTimeout(timer);
