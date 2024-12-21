@@ -1,14 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './App.css'
 
 function App() {
-  const [loading, setLoading] = useState(true);
   
   useEffect(() => {
     // Redireccionar después de 5 segundos
     const timer = setTimeout(() => {
       window.location.href = `https://${import.meta.env.VITE_APP_URL}`;
-    }, 5000);
+    },3000);
 
     return () => clearTimeout(timer);
   }, []);
